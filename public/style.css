@@ -1,0 +1,64 @@
+/* まずはスマホで横幅がはみ出さないようにする */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 全体の余白をスマホで見やすく */
+body {
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 投稿フォーム：幅100% + 入力しやすいサイズ */
+textarea {
+  width: 100%;
+  min-height: 7em;
+  font-size: 16px; /* スマホで勝手にズームされにくい */
+  padding: 10px;
+}
+
+/* ファイル選択とボタンも押しやすく */
+input[type="file"] {
+  width: 100%;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* 投稿の表示：画像がはみ出さないように */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 小さい画面のときだけ、文字や余白を少し詰める */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  /* dl がスマホだと詰まるので少し余白を調整 */
+  dl {
+    margin: 0 0 16px 0;
+  }
+
+  dt {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+}
