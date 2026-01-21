@@ -24,6 +24,9 @@ $select_sth->execute([
 ]);
 ?>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+
 <h1>フォローされている一覧</h1>
 
 <ul>
@@ -41,4 +44,5 @@ $select_sth->execute([
     (<?= $relationship['created_at'] ?>にフォローされました)
   </li>
   <?php endforeach; ?>
+
 </ul>
