@@ -55,8 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // フォームでPOSTした場合�
 
 <?php if($delete_result): ?>
   
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/style.css">
 
 <div>
   <?= htmlspecialchars($followee_user['name']) ?> さんのフォローを解除しました。<br>
@@ -75,3 +73,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // フォームでPOSTした場合�
 </div>
 
 <?php endif; ?>
+
