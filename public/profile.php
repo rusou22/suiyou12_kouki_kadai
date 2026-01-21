@@ -59,6 +59,9 @@ if (!empty($_SESSION['login_user_id'])) { // ログインしている場合
   $follower_relationship = $select_sth->fetch();
 }
 ?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+
 <a href="/timeline.php">タイムラインに戻る</a>
 
 <div style="
@@ -146,4 +149,5 @@ if (!empty($_SESSION['login_user_id'])) { // ログインしている場合
       <?php endif; ?>
     </dd>
   </dl>
+
 <?php endforeach ?>
