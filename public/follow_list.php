@@ -24,6 +24,9 @@ $select_sth->execute([
 ]);
 ?>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+
 <h1>フォロー済のユーザー一覧</h1>
 
 <ul>
@@ -42,4 +45,5 @@ $select_sth->execute([
    (<a href="./follow_remove.php?followee_user_id=<?= $relationship['followee_user_id'] ?>">フォロー解除</a>)
   </li>
   <?php endforeach; ?>
+
 </ul>
