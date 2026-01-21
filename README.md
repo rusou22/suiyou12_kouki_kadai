@@ -207,12 +207,53 @@ docker compose exec mysql mysql example_db
 ```
 
 ```sql
-CREATE TABLE IF NOT EXISTS `bbs_entries` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `body` TEXT NOT NULL,
-  `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
-  `image_filename` TEXT DEFAULT NULL
-);
+users テーブル
+
+CREATE TABLE `users` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `icon_filename` text COLLATE utf8mb4_unicode_ci,
+  `introduction` text COLLATE utf8mb4_unicode_ci,
+  `cover_filename` text COLLATE utf8mb4_unicode_ci,
+  `birthday` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB
+  DEFAULT CHARSET=utf8mb4
+  COLLATE=utf8mb4_unicode_ci;
+
+
+
+
+bbs_entriesテーブル（投稿）
+
+CREATE TABLE `bbs_entries` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int unsigned NOT NULL,
+  `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image_filename` text COLLATE utf8mb4_unicode_ci,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB
+  DEFAULT CHARSET=utf8mb4
+  COLLATE=utf8mb4_unicode_ci;
+
+
+
+
+user_relationships テーブル（フォロー）
+
+CREATE TABLE `user_relationships` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `followee_user_id` int unsigned NOT NULL,
+  `follower_user_id` int unsigned NOT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB
+  DEFAULT CHARSET=utf8mb4
+  COLLATE=utf8mb4_unicode_ci;
 ```
 
 ---
@@ -220,10 +261,10 @@ CREATE TABLE IF NOT EXISTS `bbs_entries` (
 ## 11. 動作確認（ブラウザ）
 
 ```
-http://<PUBLIC_IP>/post.php
+http://<PUBLIC_IP>/login.php
 ```
 
-ページが表示され、投稿/画像機能が動作すれば成功です。
+ページが表示され、動作すれば成功です。
 
 ---
 
