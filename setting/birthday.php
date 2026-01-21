@@ -31,6 +31,9 @@ if (isset($_POST['birthday'])) {
   return;
 }
 ?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+
 <a href="./index.php">設定一覧に戻る</a>
 
 <h1>生年月日</h1>
@@ -43,4 +46,5 @@ if (isset($_POST['birthday'])) {
 <div>
   生年月日の変更処理が完了しました。
 </div>
+
 <?php endif; ?>
