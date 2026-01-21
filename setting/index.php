@@ -14,6 +14,9 @@ $select_sth->execute([
 ]);
 $user = $select_sth->fetch();
 ?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+
 <a href="/timeline.php">タイムラインに戻る</a>
 <h1>設定画面</h1>
 <p>
@@ -32,4 +35,5 @@ $user = $select_sth->fetch();
   <li><a href="./cover.php">カバー画像設定</a></li>
   <li><a href="./birthday.php">生年月日設定</a></li>
   <li><a href="./introduction.php">自己紹介文設定</a></li>
+
 </ul>
