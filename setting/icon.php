@@ -45,6 +45,8 @@ if (isset($_POST['image_base64'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 
+<a href="./index.php">設定一覧に戻る</a>
+
 <h1>アイコン画像設定/変更</h1>
 <div>
   <?php if(empty($user['icon_filename'])): ?>
@@ -110,3 +112,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 </script>
+
