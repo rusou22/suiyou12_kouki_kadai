@@ -31,6 +31,8 @@ if (isset($_POST['introduction'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 
+<a href="./index.php">設定一覧に戻る</a>
+
 <h1>自己紹介設定</h1>
 <form method="POST">
   <textarea type="text" name="introduction" rows="5" maxlength="1000"
@@ -44,3 +46,4 @@ if (isset($_POST['introduction'])) {
 </div>
 
 <?php endif; ?>
+
