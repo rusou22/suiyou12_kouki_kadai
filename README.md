@@ -115,15 +115,14 @@ docker compose version
 
 ---
 
-## 7. プロジェクト作成（例：dockertest）
+## 7. プロジェクト作成（例：suiyou12）
 
 ```bash
-mkdir -p ~/dockertest/nginx/conf.d
-mkdir -p ~/dockertest/public
-cd ~/dockertest
+mkdir -p ~/suiyou12/nginx/conf.d
+mkdir -p ~/suiyou12/public
+cd ~/suiyou12
 ```
 
-> **Dockerfile / docker-compose.yml / nginx/conf.d/default.conf / public/bbsimagetest.php** の内容は **リポジトリからコピー**してください。
 
 ### 7.1 各種ファイルの作成(内容はリポジトリからコピーしてください。)
 
@@ -131,20 +130,41 @@ cd ~/dockertest
 vim Dockerfile
 vim docker-compose.yml
 vim nginx/conf.d/default.conf
-vim public/bbsimagetest.php
+vim public/login.php
+etc....
 ```
 
 ### 7.2 完成ディレクトリ構成
 
 ```
-dockertest/
+suiyou12/
 ├── Dockerfile
 ├── docker-compose.yml
+├── php.ini
 ├── nginx/
 │   └── conf.d/
 │       └── default.conf
 └── public/
-    └── post_site.php
+    ├── change_name.php
+    ├── follow.php
+    ├── follow_list.php
+    ├── follow_remove.php
+    ├── follower_list.php
+    ├── login.php
+    ├── login_finish.php
+    ├── profile.php
+    ├── signup.php
+    ├── signup_finish.php
+    ├── style.css
+    ├── timeline.php
+    ├── timeline_json.php
+    ├── users.php
+    └── setting/
+        ├── birthday.php
+        ├── cover.php
+        ├── icon.php
+        ├── index.php
+        └── introduction.php
 ```
 
 ---
