@@ -48,6 +48,9 @@ if (isset($_POST['image_base64'])) {
 }
 
 ?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+
 
 <a href="./index.php">設定一覧に戻る</a>
 
@@ -123,4 +126,5 @@ document.addEventListener("DOMContentLoaded", () => {
     reader.readAsDataURL(file);
   });
 });
+
 </script>
