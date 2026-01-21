@@ -40,6 +40,9 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 }
 ?>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+
 初めての人は<a href="/signup.php">会員登録</a>しましょう。
 <hr>
 <h1>ログイン</h1>
@@ -63,4 +66,5 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 <div style="color: red;">
   メールアドレスかパスワードが間違っています。
 </div>
+
 <?php endif; ?>
