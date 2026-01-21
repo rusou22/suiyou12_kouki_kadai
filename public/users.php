@@ -24,6 +24,9 @@ if (!empty($_SESSION['login_user_id'])) {
 }
 ?>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+
 <body>
   <h1>会員一覧</h1>
 
@@ -66,4 +69,5 @@ if (!empty($_SESSION['login_user_id'])) {
     </div>
     <hr style="border: none; border-bottom: 1px solid gray;">
   <?php endforeach; ?>
+
 </body>
