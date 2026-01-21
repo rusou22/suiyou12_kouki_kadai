@@ -51,6 +51,8 @@ function h($s) { return htmlspecialchars($s ?? '', ENT_QUOTES, 'UTF-8'); }
 <!doctype html>
 <html lang="ja">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
 <title>名前変更</title>
 <body>
   <h1>名前変更</h1>
@@ -72,4 +74,5 @@ function h($s) { return htmlspecialchars($s ?? '', ENT_QUOTES, 'UTF-8'); }
   </form>
 
 </body>
+
 </html>
