@@ -1,54 +1,9 @@
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-
-body {
-  padding: 12px;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-
-textarea {
-  width: 100%;
-  min-height: 7em;
-  font-size: 16px; 
-  padding: 10px;
-}
-
-/* ファイル選択とボタンも押しやすく */
-input[type="file"] {
-  width: 100%;
-  font-size: 16px;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-}
-
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
 @media (max-width: 600px) {
   body {
     padding: 10px;
     font-size: 15px;
   }
 
-  
   dl {
     margin: 0 0 16px 0;
   }
@@ -60,5 +15,10 @@ img {
 
   dd {
     margin-left: 0;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 14px;
   }
 }
