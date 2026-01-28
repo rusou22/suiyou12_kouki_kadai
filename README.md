@@ -220,9 +220,7 @@ CREATE TABLE `users` (
   `cover_filename` text COLLATE utf8mb4_unicode_ci,
   `birthday` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB
-  DEFAULT CHARSET=utf8mb4
-  COLLATE=utf8mb4_unicode_ci;
+);
 
 
 
@@ -236,9 +234,7 @@ CREATE TABLE `bbs_entries` (
   `image_filename` text COLLATE utf8mb4_unicode_ci,
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB
-  DEFAULT CHARSET=utf8mb4
-  COLLATE=utf8mb4_unicode_ci;
+);
 
 
 
@@ -251,9 +247,7 @@ CREATE TABLE `user_relationships` (
   `follower_user_id` int unsigned NOT NULL,
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB
-  DEFAULT CHARSET=utf8mb4
-  COLLATE=utf8mb4_unicode_ci;
+);
 ```
 
 ---
